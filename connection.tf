@@ -1,11 +1,11 @@
 provider "google" {
-    credentials = "${file("/account.json)}"
-	project = "trashcode"
-	region = "us-west1"
+    credentials = "${file("C:/repo/account.json")}"
+	project = "innate-gizmo-187004"
+	region = "asia-south1"
 }
 
 provider "aws" {
-    region = "us-west-2"
+    region = "ap-south-1"
 }
 
 provider "azurerm" {
