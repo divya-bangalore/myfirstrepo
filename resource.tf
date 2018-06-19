@@ -25,3 +25,15 @@ resource "aws_subnet" "subnet2" {
   availability_zone = "ap-south-1b"
 }
 
+resource "aws_security_group" "subsecurity" {
+    vpc_id = "${aws_vpc.example_vpc.id}"
+	ingress {
+	    cidr_blocks = [
+		    "${aws_vpc.example_vpc.cidr_block}"
+		]
+	from_port = 80
+	to_port = 80
+	protocol = "tcp"
+	}
+}
+
